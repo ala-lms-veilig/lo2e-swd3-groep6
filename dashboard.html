@@ -8,7 +8,7 @@ require_once "helperJ.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 <body>
 
@@ -16,11 +16,9 @@ require_once "helperJ.php";
     <div id="dashboard">
 
         <div id="sidebar">
-            <a href="index.html" onclick="showTab('home')"><i class="fas fa-home"></i> Home</a>
+            <a href="#" onclick="showTab('home')"><i class="fas fa-home"></i> Home</a>
             <a href="#" onclick="showTab('Overzicht')"><i class="fa-solid fa-eye"></i>Overzicht</a>
             <a href="#" onclick="showTab('klachten')"><i class="fas fa-exclamation-triangle"></i> Klachten</a>
-            
-
         </div>
 
         <div id="content">
@@ -34,9 +32,10 @@ require_once "helperJ.php";
                 <p>Bekijk hier waar de docenten zijn.</p>
                 <table>
                     <tr class="tr-class">
-                      <th>Company</th>
-                      <th>Contact</th>
-                      <th>Country</th>
+                      <th>Naam</th>
+                      <th>Status</th>
+                      <th>Tijd</th>
+                      <th>Lokaal</th>
                     </tr>
                     <tr>
                       <td>Alfreds Futterkiste</td>

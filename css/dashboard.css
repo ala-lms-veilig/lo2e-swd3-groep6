@@ -81,9 +81,15 @@ footer p {
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid grey;
   }
 
   .tr-class{
-    background-color: #2e0e4a;
+    background-color: #ec4a67;
+    color: #f8f9fa;
+  }
+
+  table{
+    width: 100%;
+    margin-top: 10vh;
   }
