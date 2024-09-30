@@ -43,14 +43,15 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
-
-<form method='POST'>
+<article class="formregister">
+ <form method='POST'>
+    <h2>Registreren</h2>
     Gebruikersnaam:<br>
-    <input type='text' name='gebruikersnaam'><br><br>
+    <input type='text' class="registerinput" name='gebruikersnaam'><br><br>
     Wachtwoord:<br>
-    <input type='text' name='wachtwoord'><br><br>
-    <input type='submit' name='submit' value='opslaan'>
-</form>
-
+    <input type='text' class="registerinput" name='wachtwoord'><br><br>
+    <input type='submit' class="registersubmit" name='submit' value='Registreren'>
+ </form>
+</article>
 </body>
 </html>

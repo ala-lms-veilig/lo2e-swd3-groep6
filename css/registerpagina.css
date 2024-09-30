@@ -1,5 +1,5 @@
 body {
-     background-image: url(https://aadcdn.msauthimages.net/c1c6b6c8-w94tozeomdz3lhm2spj-ohonvs55g4tpnolhnsjfl4i/logintenantbranding/0/illustration?ts=638386648523833598);
+    background-image: url(https://aadcdn.msauthimages.net/c1c6b6c8-w94tozeomdz3lhm2spj-ohonvs55g4tpnolhnsjfl4i/logintenantbranding/0/illustration?ts=638386648523833598);
 }
 
 form {
@@ -12,16 +12,16 @@ form {
     opacity: 2px;
 }
 
-.formlogin {
+.formregister {
     margin-left: 575px;
     padding-top: 225px;
 }
 
-.logininput {
+.registerinput {
     height: 20px;
 }
 
-.loginsubmit {
+.registersubmit {
     background-color: #2e0e4a;
     color: white;
 }
