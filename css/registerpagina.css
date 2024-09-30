@@ -24,4 +24,6 @@ form {
 .registersubmit {
     background-color: #2e0e4a;
     color: white;
+    cursor:pointer;
 }
+
