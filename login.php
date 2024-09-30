@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="contactpagina">
     <title>Inloggen</title>
-    <link rel="stylesheet" type="text/css" href="css/">
+    <link rel="stylesheet" type="text/css" href="./css/loginpagina.css">
   </head>
   <body>
     <?php
