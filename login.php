@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="contactpagina">
     <title>Inloggen</title>
-    <link rel="stylesheet" type="text/css" href="css/">
+    <link rel="stylesheet" type="text/css" href="./css/loginpagina.css">
   </head>
   <body>
     <?php
@@ -34,13 +34,15 @@
       }
     } 
     ?>
-       <form action="login.php" method="POST">
-             Gebruikersnaam:<br>
-             <input type="text" name="gebruikersnaam">
-             Wachtwoord:<br>
-             <input type="password" name="wachtwoord">
-             <input type="submit" name="submit" value="Inloggen">
-       </form>
-    </div>
+  <article class="formlogin"> 
+    <form action="login.php" method='POST'>
+      <h2>Inloggen</h2>
+      Gebruikersnaam:<br>
+      <input type='text' class="logininput" name='gebruikersnaam'><br><br>
+      Wachtwoord:<br>
+      <input type='text' class="logininput" name='wachtwoord'><br><br>
+      <input type='submit' class="loginsubmit" name='submit' value='Inloggen'>
+     </form>
+  </article>
  </body>
 </html>

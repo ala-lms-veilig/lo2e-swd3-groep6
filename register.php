@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Registeren</title>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Registreren">
+    <meta name="author" content="Zine, Juan, Yassine, Alexandros">
+    <meta name="keywords" content="contactpagina">
+    <title>Registreren</title>
+    <link rel="stylesheet" type="text/css" href="./css/registerpagina.css">
+  </head>
 <body>
   
 <?php
@@ -38,15 +41,17 @@ if(isset($_POST['submit'])) {
         echo "Vul beide velden in";
     }
 }
+
 ?>
-
-<form method='POST'>
+<article class="formregister">
+ <form method='POST'>
+    <h2>Registreren</h2>
     Gebruikersnaam:<br>
-    <input type='text' name='gebruikersnaam'><br><br>
+    <input type='text' class="registerinput" name='gebruikersnaam'><br><br>
     Wachtwoord:<br>
-    <input type='text' name='wachtwoord'><br><br>
-    <input type='submit' name='submit' value='opslaan'>
-</form>
-
+    <input type='text' class="registerinput" name='wachtwoord'><br><br>
+    <input type='submit' class="registersubmit" name='submit' value='Registreren'>
+ </form>
+</article>
 </body>
 </html>
