@@ -32,7 +32,7 @@
             echo "Query niet gelukt";
          }
       }
-    }
+    } 
     ?>
   <article class="formlogin"> 
     <form action="login.php" method='POST'>
