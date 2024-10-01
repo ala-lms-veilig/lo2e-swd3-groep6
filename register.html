@@ -11,38 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./css/registerpagina.css">
   </head>
 <body>
-  
-<?php
-if(isset($_POST['submit'])) {
-    if(!empty($_POST['gebruikersnaam']) && !empty($_POST['wachtwoord'])) {
-        
-        try{
-            $conn = new mysqli("localhost","root","","#");
-        } catch(Exception $e) {
-            $error = "Geen connectie aan Database";
-            die($error);
-        }
-        $user = $_POST['gebruikersnaam'];
-        $pass = $_POST['wachtwoord'];
 
-        $sql = "INSERT INTO gebruikers VALUES (NULL,'$user','$pass')";
-
-        try{
-            $conn->query($sql);
-
-            $conn->close();
-            echo "Gebruiker Toegevoegd";
-
-        } catch(Exception $e) {
-            $error = "Geen goede query";
-            die($error);
-        }
-    } else {
-        echo "Vul beide velden in";
-    }
-}
-
-?>
 <article class="formregister">
  <form method='POST'>
     <h2>Registreren</h2>
