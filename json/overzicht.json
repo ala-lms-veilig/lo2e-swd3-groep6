@@ -1,0 +1,7 @@
+[
+    { "naam": "Jan Jansen", "rol": "Docent", "tijd": "08:30", "lokaal": "A101" },
+    { "naam": "Piet Pietersen", "rol": "Beheerder", "tijd": "09:00", "lokaal": "B201" },
+    { "naam": "Anna de Vries", "rol": "Docent", "tijd": "08:45", "lokaal": "C301" },
+    { "naam": "Sara Klaassen", "rol": "Ondersteuner", "tijd": "09:15", "lokaal": "A903" },
+    { "naam": "Tom van Dijk", "rol": "Docent", "tijd": "08:50", "lokaal": "B502" }
+]

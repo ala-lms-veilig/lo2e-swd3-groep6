@@ -1,6 +1,3 @@
-<?php
-require_once "helperJ.php"; 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +6,7 @@ require_once "helperJ.php";
     <title>Mijn Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <script type="text/javascript" src="js/overzicht.js" defer></script>
 </head>
 <body>
 
@@ -26,7 +24,6 @@ require_once "helperJ.php";
                 <p>Dit is de hoofdpagina van jouw dashboard. Hier kun je belangrijke informatie en meldingen weergeven.</p>
             </section>
 
-            <!-- Overzicht-sectie: nu inclusief aanwezigheid -->
             <section class="Overzicht">
                 <h2>Overzicht</h2>
                 <p>Bekijk hoeveel collega's er momenteel aanwezig zijn in het gebouw en zie hun details hieronder.</p>
@@ -35,7 +32,8 @@ require_once "helperJ.php";
                     <h3>Er zijn momenteel <span id="aantalAanwezigen"></span> collega's aanwezig.</h3>
                 </div>
 
-                <!-- Aanwezigheidstabel in overzicht -->
+                <input type="text" id="searchFilter" placeholder="Zoek op naam, rol of lokaal..." onkeyup="filterTabel()">
+
                 <table id="aanwezigheidstabel">
                     <thead>
                         <tr>
@@ -46,7 +44,7 @@ require_once "helperJ.php";
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Rijen worden hier dynamisch toegevoegd -->
+                        
                     </tbody>
                 </table>
             </section>
@@ -60,48 +58,6 @@ require_once "helperJ.php";
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function showTab(tabName) {
-            $('section').hide();
-            $('.' + tabName).show();
-        }
-
-        // Simuleer aanwezigheid data van collega's (later kan dit van een API komen)
-        const aanwezigen = [
-            { naam: "Jan Jansen", rol: "Docent", tijd: "08:30", lokaal: "A101" },
-            { naam: "Piet Pietersen", rol: "Beheerder", tijd: "09:00", lokaal: "B201" },
-            { naam: "Anna de Vries", rol: "Docent", tijd: "08:45", lokaal: "C301" },
-            { naam: "Sara Klaassen", rol: "Ondersteuner", tijd: "09:15", lokaal: "A903" },
-            { naam: "Tom van Dijk", rol: "Docent", tijd: "08:50", lokaal: "B502" }
-        ];
-
-        function updateAanwezigheid() {
-            // Update het aantal aanwezige collega's
-            const aantalAanwezigen = aanwezigen.length;
-            $('#aantalAanwezigen').text(aantalAanwezigen);
-
-            // Verwijder eerdere rijen (indien aanwezig)
-            $('#aanwezigheidstabel tbody').empty();
-
-            // Voeg rijen toe aan de tabel voor elke aanwezige collega
-            aanwezigen.forEach(function(collega) {
-                const row = `<tr>
-                    <td>${collega.naam}</td>
-                    <td>${collega.rol}</td>
-                    <td>${collega.tijd}</td>
-                    <td>${collega.lokaal}</td>
-                </tr>`;
-                $('#aanwezigheidstabel tbody').append(row);
-            });
-        }
-
-        // Laat de home-sectie standaard zien
-        $(document).ready(function() {
-            $('section').hide();
-            $('.home').show();
-            updateAanwezigheid(); // Update aanwezigheid als de pagina laadt
-        });
-    </script>
-
+    
 </body>
 </html>
