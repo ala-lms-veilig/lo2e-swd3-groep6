@@ -12,12 +12,11 @@ require_once "helperJ.php";
 </head>
 <body>
 
-
     <div id="dashboard">
 
         <div id="sidebar">
             <a href="#" onclick="showTab('home')"><i class="fas fa-home"></i> Home</a>
-            <a href="#" onclick="showTab('Overzicht')"><i class="fa-solid fa-eye"></i>Overzicht</a>
+            <a href="#" onclick="showTab('Overzicht')"><i class="fa-solid fa-eye"></i> Overzicht</a>
             <a href="#" onclick="showTab('klachten')"><i class="fas fa-exclamation-triangle"></i> Klachten</a>
         </div>
 
@@ -27,27 +26,29 @@ require_once "helperJ.php";
                 <p>Dit is de hoofdpagina van jouw dashboard. Hier kun je belangrijke informatie en meldingen weergeven.</p>
             </section>
 
+            <!-- Overzicht-sectie: nu inclusief aanwezigheid -->
             <section class="Overzicht">
                 <h2>Overzicht</h2>
-                <p>Bekijk hier waar de docenten zijn.</p>
-                <table>
-                    <tr class="tr-class">
-                      <th>Naam</th>
-                      <th>Status</th>
-                      <th>Tijd</th>
-                      <th>Lokaal</th>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </table>
+                <p>Bekijk hoeveel collega's er momenteel aanwezig zijn in het gebouw en zie hun details hieronder.</p>
+                
+                <div id="aanwezigheidsgegevens">
+                    <h3>Er zijn momenteel <span id="aantalAanwezigen"></span> collega's aanwezig.</h3>
+                </div>
+
+                <!-- Aanwezigheidstabel in overzicht -->
+                <table id="aanwezigheidstabel">
+                    <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>Rol</th>
+                            <th>Inchecktijd</th>
+                            <th>Lokaal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rijen worden hier dynamisch toegevoegd -->
+                    </tbody>
+                </table>
             </section>
 
             <section class="klachten">
@@ -58,15 +59,48 @@ require_once "helperJ.php";
 
     </div>
 
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function showTab(tabName) {
             $('section').hide();
-
             $('.' + tabName).show();
         }
+
+        // Simuleer aanwezigheid data van collega's (later kan dit van een API komen)
+        const aanwezigen = [
+            { naam: "Jan Jansen", rol: "Docent", tijd: "08:30", lokaal: "A101" },
+            { naam: "Piet Pietersen", rol: "Beheerder", tijd: "09:00", lokaal: "B201" },
+            { naam: "Anna de Vries", rol: "Docent", tijd: "08:45", lokaal: "C301" },
+            { naam: "Sara Klaassen", rol: "Ondersteuner", tijd: "09:15", lokaal: "A903" },
+            { naam: "Tom van Dijk", rol: "Docent", tijd: "08:50", lokaal: "B502" }
+        ];
+
+        function updateAanwezigheid() {
+            // Update het aantal aanwezige collega's
+            const aantalAanwezigen = aanwezigen.length;
+            $('#aantalAanwezigen').text(aantalAanwezigen);
+
+            // Verwijder eerdere rijen (indien aanwezig)
+            $('#aanwezigheidstabel tbody').empty();
+
+            // Voeg rijen toe aan de tabel voor elke aanwezige collega
+            aanwezigen.forEach(function(collega) {
+                const row = `<tr>
+                    <td>${collega.naam}</td>
+                    <td>${collega.rol}</td>
+                    <td>${collega.tijd}</td>
+                    <td>${collega.lokaal}</td>
+                </tr>`;
+                $('#aanwezigheidstabel tbody').append(row);
+            });
+        }
+
+        // Laat de home-sectie standaard zien
+        $(document).ready(function() {
+            $('section').hide();
+            $('.home').show();
+            updateAanwezigheid(); // Update aanwezigheid als de pagina laadt
+        });
     </script>
 
 </body>
