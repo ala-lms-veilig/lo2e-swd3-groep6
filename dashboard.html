@@ -18,11 +18,13 @@
         </div>
 
         <div id="content">
+            <!-- Home Section -->
             <section class="home">
                 <h2>Welkom op de Home-pagina</h2>
                 <p>Dit is de hoofdpagina van jouw dashboard. Hier kun je belangrijke informatie en meldingen weergeven.</p>
             </section>
 
+            <!-- Overzicht Section -->
             <section class="Overzicht">
                 <h2>Overzicht</h2>
                 <p>Bekijk hier waar de docenten zijn.</p>
@@ -42,21 +44,37 @@
                 </table>
             </section>
 
+            <!-- Klachten Section -->
             <section class="klachten">
                 <h2>Klachten</h2>
                 <p>Volg de klachten van gebruikers en neem actie waar nodig.</p>
+
+                <!-- Table to display complaints -->
+                <table id="complaints-table">
+                    <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>Role</th>
+                            <th>Klacht</th>
+                        </tr>
+                    </thead>
+                    <tbody id="complaints-body">
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
             </section>
+
         </div>
 
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/klachten.js"></script>
+    <script src="js/dashboard.js"></script>
     <script>
         function showTab(tabName) {
             $('section').hide();
             $('.' + tabName).show();
-        }
-    </script>
-    <script src="js/dashboard.js"></script>
+        }</script>
 </body>
 </html>

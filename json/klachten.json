@@ -1,0 +1,19 @@
+{
+    "klachten": [
+      {
+        "naam": "Jan Jansen",
+        "werk_rol": "Projectmanager",
+        "klacht": "De deadlines worden te vaak gewijzigd zonder overleg."
+      },
+      {
+        "naam": "Lisa de Vries",
+        "werk_rol": "Softwareontwikkelaar",
+        "klacht": "De werklast is te hoog en er is onvoldoende ondersteuning."
+      },
+      {
+        "naam": "Mark Pieters",
+        "werk_rol": "Systeembeheerder",
+        "klacht": "De technische infrastructuur is verouderd en veroorzaakt vertragingen."
+      }
+    ]
+  }
