@@ -11,7 +11,6 @@ function toonHerinnering() {
 }
 
 
-
 sluitKnop.addEventListener('click', () => {
     herinnering.classList.remove('toon');
     setTimeout(() => {
