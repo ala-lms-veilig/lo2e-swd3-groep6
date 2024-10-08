@@ -3,5 +3,6 @@
     { "naam": "Piet Pietersen", "rol": "Beheerder", "tijd": "09:00", "lokaal": "B201" },
     { "naam": "Anna de Vries", "rol": "Docent", "tijd": "08:45", "lokaal": "C301" },
     { "naam": "Sara Klaassen", "rol": "Ondersteuner", "tijd": "09:15", "lokaal": "A903" },
-    { "naam": "Tom van Dijk", "rol": "Docent", "tijd": "08:50", "lokaal": "B502" }
+    { "naam": "Tom van Dijk", "rol": "Docent", "tijd": "08:50", "lokaal": "B502" },
+    { "naam": "Nikki Wang", "rol": "Student", "tijd": "08:50", "lokaal": "B312" }
 ]
