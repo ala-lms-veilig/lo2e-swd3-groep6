@@ -38,3 +38,19 @@ button {
 button:hover {
     background-color: #ec4a68c6;
 }
+
+.klachtIndienen {
+    background-color: white;
+    margin: 5px;
+    padding: 20px;
+    width: 275px;
+    border: 2px solid black;
+    border-radius: 5px;
+    opacity: 2px;
+}
+
+.klachtbutton {
+    background-color: #2e0e4a;
+    color: white;
+    cursor:pointer;
+}
