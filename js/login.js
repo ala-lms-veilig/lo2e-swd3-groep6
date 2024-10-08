@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (isLoggedIn === 'true') {
         contentDiv.innerHTML = `
+           <article class="ingelogdmelding">
             <h2>Welkom!</h2>
             <p>Je bent ingelogd.</p>
             <button id="logoutButton">Uitloggen</button>
+           </article>
         `;
         
         document.getElementById('logoutButton').addEventListener('click', function() {
