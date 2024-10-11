@@ -2,7 +2,7 @@ async function loadComplaints() {
     try {
         // Load the klachten.json file
         const response = await fetch('json/klachten.json');
-        const complaints = await response.json();
+        const data = await response.json();
 
         // Get the table body for complaints
         const complaintsBody = document.getElementById('complaints-body');
@@ -11,18 +11,18 @@ async function loadComplaints() {
         complaintsBody.innerHTML = '';
 
         // Loop through each complaint and add a row to the table
-        complaints.forEach(complaint => {
+        data.klachten.forEach(klacht => {
             const row = document.createElement('tr');
 
             // Create table cells for each field
             const nameCell = document.createElement('td');
-            nameCell.textContent = complaint.naam;
+            nameCell.textContent = klacht.naam;
 
             const roleCell = document.createElement('td');
-            roleCell.textContent = complaint.role;
+            roleCell.textContent = klacht.werk_rol;
 
             const complaintCell = document.createElement('td');
-            complaintCell.textContent = complaint.klacht;
+            complaintCell.textContent = klacht.klacht;
 
             // Append cells to the row
             row.appendChild(nameCell);
