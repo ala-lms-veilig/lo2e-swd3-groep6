@@ -1,16 +1,18 @@
-[
-    {
-    "firstName": "Juan",
-    "lastName": "Santiago",
-    "Status": "Aanwezig",
-    "Tijd":"10:30",
-    "Lokaal":"B904"
-    
-},{
-    "firstName": "Zine",
-    "lastName": "Zaouki",
-    "Status": "Aanwezig",
-    "Tijd":"10:00",
-    "Lokaal":"A904"
+{
+  "werknemers":  [
+        {
+            "firstName": "Juan",
+            "lastName": "Santiago",
+            "Status": "Aanwezig",
+            "Tijd": "10:30",
+            "Lokaal": "B904"
+        },
+        {
+            "firstName": "Zine",
+            "lastName": "Zaouki",
+            "Status": "Aanwezig",
+            "Tijd": "10:00",
+            "Lokaal": "A904"
+        }
+    ]
 }
-]

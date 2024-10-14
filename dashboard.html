@@ -30,16 +30,21 @@
                 <p>Bekijk hier waar de docenten zijn.</p>
 
                 <!-- Table to display posts -->
-                <table id="posts-table">
+                <table id="werknemers-table">
                     <thead>
                         <tr>
-                            <th>Naam</th>
+                            <th>First name</th>
+                            <th>Last name</th>
                             <th>Status</th>
-                            <th>Views</th>
+                            <th>Tijd</th>
+                            <th>Lokaal</th>
                         </tr>
                     </thead>
-                    <tbody id="posts-body">
-                        <!-- Data will be injected here -->
+                    <tbody id="werknemers-body">
+                        <tr>
+
+                        </tr>
+                        
                     </tbody>
                 </table>
             </section>
@@ -50,7 +55,7 @@
                 <p>Volg de klachten van gebruikers en neem actie waar nodig.</p>
 
                 <!-- Table to display complaints -->
-                <table id="complaints-table">
+                <table id="klachten-table">
                     <thead>
                         <tr>
                             <th>Naam</th>
@@ -58,9 +63,16 @@
                             <th>Klacht</th>
                         </tr>
                     </thead>
-                    <tbody id="complaints-body">
-                        <!-- Data will be injected here -->
+                    <template id="klachten-template">
+                    <tbody>
+                       <tr>
+                        <td class="naam"></td>
+                        <td class="naam"></td>
+                        <td class="naam"></td>
+                       </tr>
                     </tbody>
+                </template>
+                <article id="container-klachten"></article>
                 </table>
             </section>
 
