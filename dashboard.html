@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/dashboard.css">
     <script type="text/javascript" src="js/overzicht.js" defer></script>
+    <script type="text/javascript" src="js/dashboard.js" defer></script>
 </head>
 <body>
 
@@ -19,19 +20,19 @@
         </div>
 
         <div id="content">
-            <section class="home">
+            <section class="home show" id="home">
                 <h2>Welkom op de Home-pagina</h2>
                 <p>Dit is de hoofdpagina van jouw dashboard. Hier kun je belangrijke informatie en meldingen weergeven.</p>
 
             </section>
 
-            <section class="Overzicht">
+            <section class="Overzicht hidden" id="Overzicht"> 
                 <h2>Overzicht</h2>
                 <p>Bekijk hoeveel collega's er momenteel aanwezig zijn in het gebouw en zie hun details hieronder.</p>
                 
-                <div id="aanwezigheidsgegevens">
+                <article id="aanwezigheidsgegevens">
                     <h3>Er zijn momenteel <span id="aantalAanwezigen"></span> collega's aanwezig.</h3>
-                </div>
+                </article>
 
                 <input type="text" id="searchFilter" placeholder="Zoek op naam, rol of lokaal..." onkeyup="filterTabel()">
 
@@ -45,12 +46,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
                     </tbody>
                 </table>
             </section>
 
-            <section class="klachten">
+            <section class="klachten hidden" id="klachten">
                 <h2>Klachten</h2>
                 <p>Volg de klachten van gebruikers en neem actie waar nodig.</p>
             </section>
@@ -58,7 +58,7 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     
 </body>
 </html>

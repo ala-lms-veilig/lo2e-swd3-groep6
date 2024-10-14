@@ -46,14 +46,18 @@ body {
     padding: 20px;
 }
 
-section {
-    display: none;
-}
 
 .home {
     display: block;
 }
 
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
 header {
     background-color: #343a40;
     color: #fff;
