@@ -1,21 +1,22 @@
-function ShowKlachten() {
-    
-}
+async function showKlachten() {
+        const response = await fetch('json/klachten.json');
+        const data = await response.json();
 
-async function submitKnop(event) {
-    const newKlacht = document.getElementById("klachtButton").value;
+        const template = document.getElementById("klachten-template");
+        const klachtenContainer = document.getElementById("container-klachten");
 
-    const response = fetch(klachten.json, {
-        method: "POST",
-        body: JSON.stringify({
-            title: newKlacht,
-        }),
-        headers: {
-            'Content-type': 'applicataion/json; charset=UTF-8',
-        },
-     });
+        for (let klacht of data.klachten) {
+            const clone = template.content.cloneNode(true);
 
-     const post = await response.json();
+            clone.querySelector(".naam").textContent = klacht.naam;
+            clone.querySelector(".werk_rol").textContent = klacht.werk_rol;
+            clone.querySelector(".klacht").textContent = klacht.klacht;
 
-     const klachtInvul = document.getElementById()
-}
+            klachtenContainer.appendChild(clone);
+        }
+    } 
+
+showKlachten();
+
+
+
