@@ -42,3 +42,7 @@ form {
     color: white;
     cursor:pointer;
 }
+
+#loginSection {
+    display: none;
+}

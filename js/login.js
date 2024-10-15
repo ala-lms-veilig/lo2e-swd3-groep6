@@ -1,43 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const contentDiv = document.getElementById('content');
+    const ingelogdSection = document.getElementById('ingelogdSection');
+    const loginSection = document.getElementById('loginSection');
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (isLoggedIn === 'true') {
-        contentDiv.innerHTML = `
-           <article class="ingelogdmelding">
-            <h2>Welkom!</h2>
-            <p>Je bent ingelogd.</p>
-            <button id="logoutButton">Uitloggen</button>
-           </article>
-        `;
-        
+        ingelogdSection.style.display = 'block';
+        loginSection.style.display = 'none';
+
         document.getElementById('logoutButton').addEventListener('click', function() {
             localStorage.removeItem('isLoggedIn');
-            location.reload(); 
+            location.reload();
         });
     } else {
-        contentDiv.innerHTML = `
-            <article class="formlogin"> 
-                <form id="loginForm">
-                    <h2>Inloggen</h2>
-                    Gebruikersnaam:<br>
-                    <input type='text' class="logininput" name='gebruikersnaam' id="gebruikersnaam"><br><br>
-                    Wachtwoord:<br>
-                    <input type='password' class="logininput" name='wachtwoord' id="wachtwoord"><br><br>
-                    <input type='submit' class="loginsubmit" value='Inloggen'>
-                </form>
-            </article>
-        `;
-        
+        ingelogdSection.style.display = 'none';
+        loginSection.style.display = 'block';
+
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            
+            event.preventDefault();
+
             const gebruikersnaam = document.getElementById('gebruikersnaam').value;
             const wachtwoord = document.getElementById('wachtwoord').value;
 
             if (gebruikersnaam === 'admin' && wachtwoord === '1234') {
                 localStorage.setItem('isLoggedIn', 'true');
-                location.reload(); 
+                location.reload();
             } else {
                 alert('Onjuiste gebruikersnaam of wachtwoord!');
             }
