@@ -53,7 +53,7 @@
             <section class="klachten">
                 <h2>Klachten</h2>
                 <p>Volg de klachten van gebruikers en neem actie waar nodig.</p>
-
+            
                 <!-- Table to display complaints -->
                 <table id="klachten-table">
                     <thead>
@@ -63,18 +63,19 @@
                             <th>Klacht</th>
                         </tr>
                     </thead>
-                    <template id="klachten-template">
-                    <tbody>
-                       <tr>
-                        <td class="naam"></td>
-                        <td class="naam"></td>
-                        <td class="naam"></td>
-                       </tr>
+                    <tbody id="container-klachten">
+
                     </tbody>
-                </template>
-                <article id="container-klachten"></article>
                 </table>
-            </section>
+            
+                <template id="klachten-template">
+                    <tr>
+                        <td class="naam"></td>
+                        <td class="werk_rol"></td>
+                        <td class="klacht"></td>
+                    </tr>
+                </template>
+            </section
 
         </div>
 
