@@ -1,5 +1,5 @@
 async function showWerknemers() {
-    const response = await fetch("./json/klachten.json");
+    const response = await fetch("./json/dashboard.json");
     const data = await response.json();
  
  
