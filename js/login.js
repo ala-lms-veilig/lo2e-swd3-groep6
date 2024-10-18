@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('logoutButton').addEventListener('click', function() {
             localStorage.removeItem('isLoggedIn');
-            location.reload();
+            location.reload(); 
         });
     } else {
         ingelogdSection.style.display = 'none';
