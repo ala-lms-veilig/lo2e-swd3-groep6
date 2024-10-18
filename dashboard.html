@@ -1,68 +1,40 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <script type="text/javascript" src="js/overzicht.js" defer></script>
+    <title>Aanwezigheid Melden</title>
+    <link rel="stylesheet" href="../Javascript/Css/Style.css"> <!-- Link naar CSS bestand -->
 </head>
 <body>
 
-    <div id="dashboard">
+<header>
+    <h1>Aanwezigheid Melden</h1>
+</header>
 
-        <div id="sidebar">
-            <a href="#" onclick="showTab('home')"><i class="fas fa-home"></i> Home</a>
-            <a href="#" onclick="showTab('Overzicht')"><i class="fa-solid fa-eye"></i> Overzicht</a>
-            <a href="#" onclick="showTab('klachten')"><i class="fas fa-exclamation-triangle"></i> Klachten</a>
-        </div>
+<div class="container">
+    <form id="aanwezigheidForm">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required placeholder="Vul je naam in">
+        
+        <input type="submit" value="Meld Aanwezigheid">
+    </form>
+</div>
 
-        <div id="content">
-            <section class="home">
-                <h2>Welkom op de Home-pagina</h2>
-                <p>Dit is de hoofdpagina van jouw dashboard. Hier kun je belangrijke informatie en meldingen weergeven.</p>
+<footer>
+    <p>&copy; 2023. Alle rechten voorbehouden.</p>
+    <p>Neem contact op: info@bedrijf.nl</p>
+</footer>
 
-            </section>
 
-            <section class="Overzicht">
-                <h2>Overzicht</h2>
-                <p>Bekijk hoeveel collega's er momenteel aanwezig zijn in het gebouw en zie hun details hieronder.</p>
-                
-                <div id="aanwezigheidsgegevens">
-                    <h3>Er zijn momenteel <span id="aantalAanwezigen"></span> collega's aanwezig.</h3>
-                </div>
+<script>
+    document.getElementById('aanwezigheidForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+  const naam = document.getElementById('naam').value;
+  alert(`Aanwezigheid gemeld voor: ${naam}`);
+});
+</script>
 
-                <input type="text" id="searchFilter" placeholder="Zoek op naam, rol of lokaal..." onkeyup="filterTabel()">
-
-                <table id="aanwezigheidstabel">
-                    <thead>
-                        <tr>
-                            <th>Naam</th>
-                            <th>Rol</th>
-                            <th>Inchecktijd</th>
-                            <th>Lokaal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="klachten">
-                <h2>Klachten</h2>
-                <p>Volg de klachten van gebruikers en neem actie waar nodig.</p>
-            </section>  
-        </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
 </body>
 </html>
-aaa   
-    mk;ljhgh
-
-
- 
-sdadas 
