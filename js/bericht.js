@@ -20,3 +20,6 @@ sluitKnop.addEventListener('click', () => {
 
 setInterval(toonHerinnering, 300000);
 setTimeout(toonHerinnering, 10000);
+
+
+

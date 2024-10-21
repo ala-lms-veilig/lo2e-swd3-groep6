@@ -1,0 +1,28 @@
+{
+    "header": {
+        "status": "Status",
+        "meldingen": "Meldingen",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Welkom op onze site!",
+        "subtitle": "Hier kunt u uw aanwezigheid melden!",
+        "button": "Meld Aanwezigheid"
+    },
+    "ctaSection": {
+        "boxes": [
+            {
+                "title": "Aanwezigheid aanmelden",
+                "button": "Meld uw Aanwezigheid"
+            },
+            {
+                "title": "Overzicht van uw team",
+                "button": "Bekijk overzicht"
+            },
+            {
+                "title": "Klachten indienen",
+                "button": "Dien klacht in"
+            }
+        ]
+    }
+}
