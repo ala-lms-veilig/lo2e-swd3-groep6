@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -113,3 +112,4 @@ nav ul li a {
 .cta-box:last-child {
     margin-right: 0;
 }
+

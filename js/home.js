@@ -22,10 +22,6 @@ fetch('js/home.json')
     .catch(error => console.error('Fout bij het ophalen van de JSON:', error));
 
 
-
-
-    
-
     document.addEventListener("DOMContentLoaded", function() {
         const isLoggedIn = localStorage.getItem('isLoggedIn');
     
