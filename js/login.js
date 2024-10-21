@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (gebruikersnaam === 'admin' && wachtwoord === '1234') {
                 localStorage.setItem('isLoggedIn', 'true');
-                location.reload();
+                window.location.href = 'home.html';
             } else {
                 alert('Onjuiste gebruikersnaam of wachtwoord!');
             }
