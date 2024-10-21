@@ -20,3 +20,22 @@ fetch('js/home.json')
         document.getElementById('ctaButton3').textContent = data.ctaSection.boxes[2].button;
     })
     .catch(error => console.error('Fout bij het ophalen van de JSON:', error));
+
+
+
+
+    
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+
+        if (isLoggedIn !== 'true') {
+            window.location.href = 'login.html';
+        }
+    
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'login.html'; 
+        });
+    });
