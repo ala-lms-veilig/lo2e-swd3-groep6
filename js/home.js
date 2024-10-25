@@ -4,6 +4,7 @@ async function loadData() {
         const response = await fetch('js/home.json');
         const data = await response.json();
 
+
         document.getElementById('statusLink').textContent = data.header.status;
         document.getElementById('meldingenLink').textContent = data.header.meldingen;
         document.getElementById('contactLink').textContent = data.header.contact;
@@ -18,7 +19,7 @@ async function loadData() {
         document.getElementById('ctaButton2').textContent = data.ctaSection.boxes[1].button;
         document.getElementById('ctaTitle3').textContent = data.ctaSection.boxes[2].title;
         document.getElementById('ctaButton3').textContent = data.ctaSection.boxes[2].button;
-        
+
     } catch (error) {
         console.error('Fout bij het ophalen van de JSON:', error); 
         }
