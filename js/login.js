@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const gebruikersnaam = document.getElementById('gebruikersnaam').value;
             const wachtwoord = document.getElementById('wachtwoord').value;
 
-            fetch('login/json', {
+            fetch('login.json', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
