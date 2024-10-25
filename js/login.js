@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 localStorage.setItem('isLoggedIn', 'true');
                 window.location.href = 'home.html';
             } else {
-                alert('Oonjuiste gebruikersnaam of wachtwoord!');
+                alert('Onjuiste gebruikersnaam of wachtwoord!');
             }
         });
     }
