@@ -3,7 +3,7 @@ const herinnering = document.getElementById('herinnering');
 const sluitKnop = document.getElementById('herinneringVerbergen');
 
 
-function toonHerinnering() {
+function toonHerinnering() {    
     herinnering.classList.remove('verborgen');
     setTimeout(() => {
     herinnering.classList.add('toon');
