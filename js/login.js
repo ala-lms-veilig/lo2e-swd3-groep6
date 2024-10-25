@@ -7,32 +7,26 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         loginSection.style.display = 'block';
 
+       
+        const usersData = JSON.parse(document.getElementById('userData').textContent);
+
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const gebruikersnaam = document.getElementById('gebruikersnaam').value;
             const wachtwoord = document.getElementById('wachtwoord').value;
 
-            fetch('login.json', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ gebruikersnaam: gebruikersnaam, wachtwoord: wachtwoord })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    localStorage.setItem('isLoggedIn', 'true');
-                    window.location.href = 'home.html';
-                } else {
-                    alert('Onjuiste gebruikersnaam of wachtwoord!');
-                }
-            })
-            .catch(error => {
-                console.error('Er is een fout opgetreden:', error);
-                alert('Er is een fout opgetreden. Probeer het later opnieuw.');
-            });
+       
+            const user = usersData.gebruikers.find(user => 
+                user.gebruikersnaam === gebruikersnaam && user.wachtwoord === wachtwoord
+            );
+
+            if (user) {
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'home.html';
+            } else {
+                alert('Onjuiste gebruikersnaam of wachtwoord!');
+            }
         });
     }
 });
