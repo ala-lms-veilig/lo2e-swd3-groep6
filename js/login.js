@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const loginSection = document.getElementById('loginSection');
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    if (userInfo && userInfo.isLoggedIn) {
+    if (isLoggedIn === 'true') {
         window.location.href = 'home.html';
     } else {
         loginSection.style.display = 'block';
@@ -14,14 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const wachtwoord = document.getElementById('wachtwoord').value;
 
             if (gebruikersnaam === 'admin' && wachtwoord === '1234') {
-          
-                const userData = {
-                    username: gebruikersnaam,
-                    isLoggedIn: true
-                };
-                
-                localStorage.setItem('userInfo', JSON.stringify(userData));
-                
+                localStorage.setItem('isLoggedIn', 'true');
                 window.location.href = 'home.html';
             } else {
                 alert('Onjuiste gebruikersnaam of wachtwoord!');
