@@ -13,12 +13,26 @@ document.addEventListener("DOMContentLoaded", function() {
             const gebruikersnaam = document.getElementById('gebruikersnaam').value;
             const wachtwoord = document.getElementById('wachtwoord').value;
 
-            if (gebruikersnaam === 'admin' && wachtwoord === '1234') {
-                localStorage.setItem('isLoggedIn', 'true');
-                window.location.href = 'home.html';
-            } else {
-                alert('Onjuiste gebruikersnaam of wachtwoord!');
-            }
+            fetch('https://example.com/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'login/json'
+                },
+                body: JSON.stringify({ gebruikersnaam: gebruikersnaam, wachtwoord: wachtwoord })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    window.location.href = 'home.html';
+                } else {
+                    alert('Onjuiste gebruikersnaam of wachtwoord!');
+                }
+            })
+            .catch(error => {
+                console.error('Er is een fout opgetreden:', error);
+                alert('Er is een fout opgetreden. Probeer het later opnieuw.');
+            });
         });
     }
 });
