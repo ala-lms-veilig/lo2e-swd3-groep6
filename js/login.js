@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             fetch('https://example.com/api/login', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'login/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ gebruikersnaam: gebruikersnaam, wachtwoord: wachtwoord })
             })
