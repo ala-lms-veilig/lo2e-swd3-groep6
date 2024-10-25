@@ -1,9 +1,16 @@
 async function loadData() {
     try {
+        let data;
+        const OpgeslagenData = localStorage.getItem('homeData');
+        if (OpgeslagenData) {
 
-        const response = await fetch('js/home.json');
-        const data = await response.json();
+            data = JSON.parse(OpgeslagenData);
+        } else {
 
+            const response = await fetch('js/home.json');
+            data = await response.json();
+            localStorage.setItem('homeData', JSON.stringify(data));
+        }
 
         document.getElementById('statusLink').textContent = data.header.status;
         document.getElementById('meldingenLink').textContent = data.header.meldingen;
