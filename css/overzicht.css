@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+#employeeList {
+    max-width: 600px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.employee-card {
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.employee-details {
+    font-size: 0.9em;
+    color: #666;
+}
