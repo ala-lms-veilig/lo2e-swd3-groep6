@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function() {
     let medewerkers = JSON.parse(localStorage.getItem('medewerkers'));
 
-    // Als medewerkers nog niet in de localStorage staan, haal ze dan van de API
+
     if (!medewerkers) {
         const response = await fetch('https://my-json-server.typicode.com/ala-lms-veilig/lo2e-swd3-groep6/medewerkers');
         if (!response.ok) {
@@ -63,7 +63,7 @@ function voegEventListenersToe() {
                 alert("De medewerker is bijgewerkt!");
                 const updatedMedewerker = await response.json();
 
-                // Update de medewerker in de localStorage
+
                 let medewerkers = JSON.parse(localStorage.getItem('medewerkers'));
                 medewerkers = medewerkers.map(medewerker => 
                     medewerker.id === updatedMedewerker.id ? updatedMedewerker : medewerker
@@ -96,7 +96,6 @@ function voegEventListenersToe() {
                 alert("De medewerker is verwijderd!");
                 medewerkerDiv.remove();
 
-                // Verwijder de medewerker uit de localStorage
                 let medewerkers = JSON.parse(localStorage.getItem('medewerkers'));
                 medewerkers = medewerkers.filter(medewerker => medewerker.id !== parseInt(id));
                 localStorage.setItem('medewerkers', JSON.stringify(medewerkers));
