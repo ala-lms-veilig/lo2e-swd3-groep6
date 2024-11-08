@@ -9,7 +9,7 @@ body {
 
 
 header {
-    background-color: #007bff;
+    background-color: #E74766;
     color: white;
     padding: 20px;
     text-align: center;
@@ -43,7 +43,7 @@ header h1 {
 .medewerker h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #3A0E48;
 }
 
 .medewerker p {
@@ -61,13 +61,13 @@ button {
 }
 
 button.editBtn {
-    background-color: #ffc107;
+    background-color: #3A0E48;
     color: white;
     margin-right: 10px;
 }
 
 button.deleteBtn {
-    background-color: #dc3545;
+    background-color:#E74766;
     color: white;
 }
 
