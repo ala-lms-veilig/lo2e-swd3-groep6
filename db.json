@@ -32,7 +32,14 @@
       "name": "Ginkel",
       "verdieping": "8",
       "lokaal": "B810"
-  }
+  },
+
+  {
+    "id": 6,
+    "name": "Piet",
+    "verdieping": "9",
+    "lokaal": "B910"
+}
 
   ] 
 
