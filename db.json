@@ -39,8 +39,27 @@
     "name": "Piet",
     "verdieping": "9",
     "lokaal": "B910"
-}
+}, 
+{
+  "id": 7,
+  "name": "Jan",
+  "verdieping": "8",
+  "lokaal": "B835"
+},
 
+{
+  "id": 8,
+  "name": "Henk",
+  "verdieping": "9",
+  "lokaal": "A935"
+},
+
+{
+  "id": 9,
+  "name": "Henk",
+  "verdieping": "9",
+  "lokaal": "A935"
+}
   ] 
 
 } 
