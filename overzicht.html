@@ -9,10 +9,27 @@
 <body>
     <header>
         <h1>Overzicht van Aangemelde Medewerkers</h1>
+        <button id="addMedewerkerBtn">Medewerker Toevoegen</button>
     </header>
-
-
-    <section id="medewerkerLijst"></section>
+    <div id="addMedewerkerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Voeg een nieuwe medewerker toe</h2>
+            <form id="addMedewerkerForm">
+                <label for="medewerkerNaam">Naam:</label>
+                <input type="text" id="medewerkerNaam" required>
+                
+                <label for="medewerkerVerdieping">Verdieping:</label>
+                <input type="text" id="medewerkerVerdieping" required>
+                
+                <label for="medewerkerLokaal">Lokaal:</label>
+                <input type="text" id="medewerkerLokaal" required>
+                
+                <button type="submit">Voeg toe</button>
+            </form>
+        </div>
+    </div>
+    <section id="medewerkerLijst"></section>    
 
     <script src="js/overzicht.js"></script>
 </body>
